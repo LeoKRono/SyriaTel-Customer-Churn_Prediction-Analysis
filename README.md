@@ -1,55 +1,54 @@
-# Syriatel Customer Churn Prediction Analysis
+# 📈 SyriaTel Customer Churn Prediction
 
-## Project Overview
+This repository contains a machine learning project that predicts customer churn for SyriaTel. It includes data analysis, EDA visualizations, feature engineering, model training, evaluation, and actionable recommendations—all structured in a single notebook: `index.ipynb`.
 
-This project focuses on building a machine learning model to predict customer churn for **Syriatel**, a major telecommunications provider. Churn prediction enables the company to proactively retain customers by identifying those at high risk of leaving.
+---
 
-## Business Problem
+## 🔍 Project Overview
 
-Customer churn is a significant challenge for telecom providers. Syriatel's marketing and customer success teams need a reliable way to identify customers likely to leave, so they can intervene with personalized retention strategies. This project provides a data-driven solution to address that business need.
+**Objective:** Build predictive models to identify customers likely to churn, enabling SyriaTel to proactively engage high-risk users and reduce attrition rates.
 
-## Objectives
+**Approach:**
+1. Load and explore the dataset (4,000+ customer records, ~20 features)
+2. Visualize churn distribution and key feature correlations
+3. Preprocess data (encoding, scaling, train/test split)
+4. Train and compare multiple models:
+   - Logistic Regression
+   - Decision Tree
+   - Random Forest
+   - XGBoost
+5. Evaluate performance using confusion matrix, classification report, and ROC curves
+6. Derive feature importance and business insights
 
-- Build a binary classification model to predict customer churn (Yes/No)
-- Perform exploratory data analysis to understand customer behavior
-- Evaluate several machine learning models (Logistic Regression, Random Forest, etc.)
-- Identify key drivers of churn using feature importance techniques
-- Translate model results into actionable business recommendations
+---
 
-## Dataset
+## 📊 Key Visualizations & Insights from `index.ipynb`
 
-- **Source:** [Kaggle - SyriaTel Customer Churn Dataset](https://www.kaggle.com/datasets/becksddf/churn-in-telecoms-dataset)
-- **Features:** Call minutes, plan types, charges, customer service calls, etc.
-- **Target:** `Churn` (Yes/No)
+- **Churn Distribution Bar Chart**  
+  Shows percentage of churned vs non-churned customers—revealing class imbalance.
 
-## Project Structure
+- **Feature Correlation Heatmap**  
+  Highlights relationships between features and the target, turning minutes, service calls, and plan subscriptions as initial influencers.
 
-```
-syriatel-customer-churn-prediction-analysis/
-│
-├── data/              # Dataset (or link to source)
-├── notebooks/         # Jupyter notebooks for EDA & modeling
-├── presentations/     # Stakeholder-ready presentation deck
-├── proposal/          # Project proposal document
-├── src/               # Source code / helper scripts
-├── requirements.txt   # Project dependencies
-└── README.md          # This file
-```
+- **Model Comparison Tables and ROC Curves**  
+  Demonstrate that ensemble methods (Random Forest, XGBoost) outperform baseline Logistic Regression and Decision Tree.
 
-## Tools & Technologies
+- **Feature Importance Plot**  
+  Shows top contributing factors such as:
+  - `number_customer_service_calls`
+  - `international_plan`
+  - `total_intl_minutes`
 
-- Python (Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn)
-- Jupyter Notebook
-- Git & GitHub
+These visualizations are embedded within the notebook with interpretation notes.
 
-## Evaluation Metrics
+---
 
-- Accuracy
-- Precision, Recall, F1-score
-- ROC-AUC
+## 🛠️ How to Use This Notebooks
 
-## Status
+You can run or explore the notebook to reproduce the project's flow:
 
- In Progress – Initial setup and proposal finalized. Modeling to follow.
-
+```bash
+git clone https://github.com/LeoKRono/SyriaTel-Customer-Churn_Prediction-Analysis.git
+cd SyriaTel-Customer-Churn_Prediction-Analysis
+jupyter notebook
 
